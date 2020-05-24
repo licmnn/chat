@@ -2,8 +2,7 @@ lines = []
 with open('input.txt', 'r', encoding = 'utf-8-sig') as f:
 	for line in f:
 		lines.append(line.strip())
-	print(lines)
-
+#	print(lines)
 new = []
 for line in lines:
 	if line == 'Allen':
@@ -13,7 +12,7 @@ for line in lines:
 		person = 'Tom'
 		continue
 	new.append(person + ': ' + line)
-print(new)
+#print(new)
 	
 #	def write_file(filename, lines):
 with open('output.txt', 'w') as f:
