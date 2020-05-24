@@ -13,7 +13,7 @@ with open('input.txt', 'r', encoding='utf-8') as f:
 		else:
 			text.append([name, line])
 '''
-
+#读取文件
 def read_file(filename):
 	lines = []
 	person = None
@@ -21,7 +21,7 @@ def read_file(filename):
 		for line in f:
 			lines.append(line.strip())
 		return lines
-
+#名称转换
 def convert(lines):
 	new = []
 	for line in lines:
@@ -34,10 +34,12 @@ def convert(lines):
 		if person:
 			new.append(person + ': ' + line)
 	return new
+#写入文档	
 def write_file(filename, lines):
 	with open(filename, 'w') as f:
 		for line in lines:
 			f.write(line + '\n')
+#程序执行
 def main():
 	lines = read_file('input.txt')
 	lines = convert(lines)
